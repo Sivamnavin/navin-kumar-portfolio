@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navin Kumar P - DFT Engineer</title>
+    <meta name="description" content="Professional portfolio of Navin Kumar P, a DFT Engineer specializing in Scan Insertion and MBIST">
+    <meta name="keywords" content="DFT Engineer, Scan Insertion, MBIST, Navin Kumar, Semiconductor Testing">
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --dark-bg: #343a40;
+            --text-color: #333;
+            --light-text: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+        }
+        
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .profile-image-container {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+        
+        .header-content {
+            flex-grow: 1;
+            padding-left: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.2rem;
+        }
+        
+        .resume-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .resume-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .download-resume {
+            margin-top: 1rem;
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            padding: 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .skills-list {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .skills-category {
+            margin-bottom: 1.5rem;
+        }
+        
+        .skills-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-category ul {
+            list-style: none;
+        }
+        
+        .skills-category li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skills-category li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: var(--light-bg);
+            border: 4px solid var(--accent-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .right::after {
+            left: -16px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-date {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .education-card, .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-card h3, .project-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-card p, .project-card p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .project-tag {
+            background-color: var(--light-bg);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--accent-color);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-content {
+                padding-left: 0;
+                margin-top: 1rem;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 15px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-image-container">
+                    <img src="image.jpeg" alt="Navin Kumar P" class="profile-image">
+                </div>
+                <div class="header-content">
+                    <h1>Navin Kumar P</h1>
+                    <p class="tagline">DFT Engineer | Scan Insertion Specialist | MBIST Expert</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            <span>9025548306</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            <span>navinpitchaipillai@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span>Bangalore</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                            <span><a href="https://www.linkedin.com/in/navin-kumar-351106269" style="color: white; text-decoration: none;">LinkedIn</a></span>
+                        </div>
+                    </div>
+                    <div class="download-resume">
+                        <a href="DFT_Engineer_navin_kumar.pdf" download class="resume-btn"><i class="fas fa-download"></i> Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am an aspiring DFT Engineer with a strong foundation in Design for Testability, Scan Insertion, and MBIST. Passionate about ensuring efficient testing processes and optimizing scan architectures for complex chip designs.</p>
+                    <p>I am seeking a challenging role to utilize my technical skills and knowledge in the field. A quick learner with a passion for innovation and problem-solving, ready to make a positive impact in the semiconductor industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background-color: white;">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="about-content">
+                <div class="skills-category">
+                    <h3>Design For Testability</h3>
+                    <ul>
+                        <li>Scan Insertion</li>
+                        <li>DRC Analysis during Scan Insertion</li>
+                        <li>Scan Compression (EDT)</li>
+                        <li>ATPG Pattern Generation in Compressed mode and Bypass Mode</li>
+                        <li>Coverage Analysis and Improvement</li>
+                        <li>On-Chip Clock Controller</li>
+                        <li>Scan Pattern Simulation</li>
+                        <li>JTAG and Boundary Scan</li>
+                        <li>MBIST Insertion</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Digital Design</h3>
+                    <ul>
+                        <li>Combinational and Sequential Circuit Design</li>
+                        <li>Basics of Static Timing Analysis</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Software Skills</h3>
+                    <ul>
+                        <li>Automation Languages: TCL</li>
+                        <li>Operating Systems: Linux and Windows</li>
+                        <li>Text Editor: GVIM</li>
+                        <li>EDA Packages: Tessent (Scan, TestKompress, MBIST), Questa Sim and Design Compilers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Internship at Pricol Limited</h3>
+                        <p class="timeline-date">January 2024 - March 2024</p>
+                        <p>Worked in testing and manufacturing, gaining hands-on experience in industrial testing processes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>DFT Implementation for Hierarchical Scan Architecture</h3>
+                        <p class="timeline-date">Design 1: Communication Chip</p>
+                        <p>Designed and optimized scan architecture for a hierarchical design with CoreB and multiple CoreA instances. Configured internal and external scan chains, optimizing length and compression ratios. Achieved 8x compression for CoreA and 10x for CoreB, enhancing test efficiency.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>DFT Optimization for High Compression Scan Architecture</h3>
+                        <p class="timeline-date">Design 2: Navigation Chip</p>
+                        <p>Designed and implemented scan architecture with 106 scan chains, each 420 flops long, achieving an optimized 53x compression ratio. Focused on scan chain balancing, test coverage improvement, and compression efficiency to minimize test time and data volume.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" style="background-color: white;">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <h3>B.Tech in Electronics & Communication</h3>
+                <p>Saranathan Engineering College, 2024</p>
+                <p>CGPA: 7.4</p>
+            </div>
+            <div class="education-card">
+                <h3>Class 12th</h3>
+                <p>Swami Matric HR Sec School, 2020</p>
+                <p>Score: 57.83%</p>
+            </div>
+            <div class="education-card">
+                <h3>Class 10th</h3>
+                <p>Rajavignesh HR Sec School, 2018</p>
+                <p>Score: 67.4%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Clap Switch Circuit</h3>
+                    <p>2nd Year Electronic Project</p>
+                    <p>Designed and implemented a sound-activated switch circuit that toggles electronic devices on and off in response to clapping sounds.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Electronics</span>
+                        <span class="project-tag">Circuit Design</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Public Water Quality Monitoring System</h3>
+                    <p>3rd Year Project</p>
+                    <p>Developed a system for real-time monitoring of water quality parameters in public water sources, alerting authorities about contamination events.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">IoT</span>
+                        <span class="project-tag">Sensors</span>
+                        <span class="project-tag">Water Quality</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>GMPPT using Modified GWO for PV Power System</h3>
+                    <p>4th Year Project</p>
+                    <p>Implemented a Global Maximum Power Point Tracking system using modified Grey Wolf Optimization algorithm for photovoltaic power systems under partial shading conditions.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Solar Power</span>
+                        <span class="project-tag">Optimization</span>
+                        <span class="project-tag">MPPT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background-color: white;">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <p>I'm currently seeking opportunities as a DFT Engineer. Feel free to reach out through any of the following channels:</p>
+                <div class="contact-info" style="margin-top: 2rem;">
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                        <span>9025548306</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <span>navinpitchaipillai@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span>Bangalore</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                        <span><a href="https://www.linkedin.com/in/navin-kumar-351106269" style="color: var(--primary-color); text-decoration: none;">LinkedIn</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Navin Kumar P. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/navin-kumar-351106269" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:navinpitchaipillai@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="DFT_Engineer_navin_kumar.pdf" class="social-icon" download><i class="fas fa-file-pdf"></i></a>
+                </div>
+                <p>DFT Engineer | Scan Insertion Specialist | MBIST Expert</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
